@@ -1,0 +1,167 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling with white background */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff; /* White background */
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative; /* For logo positioning */
+}
+
+/* Logo styling */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 300px; /* Doubled from 150px to 300px */
+    height: auto;
+}
+
+/* Container for centering content */
+.container, .result-container {
+    background: rgba(26, 60, 110, 0.9); /* Dark blue with slight transparency */
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin-top: 150px; /* Increased to accommodate larger logo */
+}
+
+/* Hover effect for container */
+.container:hover, .result-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Heading styling */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff6200; /* Orange */
+    text-shadow: 0 0 10px rgba(255, 98, 0, 0.3);
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Label styling */
+label {
+    font-size: 1.1rem;
+    color: #ffffff; /* White */
+    text-align: left;
+}
+
+/* Input styling */
+input[type="text"] {
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9); /* White with slight transparency */
+    color: #1a3c6e; /* Blue text for contrast */
+    outline: none;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(255, 98, 0, 0.5); /* Orange glow */
+}
+
+/* Button styling */
+button {
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #ff6200, #ff8c00); /* Orange gradient */
+    color: #ffffff; /* White text */
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 98, 0, 0.5); /* Orange shadow */
+}
+
+/* Result page styling */
+.result-container {
+    text-align: left;
+}
+
+.result-container p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #ffffff; /* White */
+}
+
+/* Italicize Mortgage Volume and Page */
+.result-container p.italic {
+    font-style: italic;
+    color: #d0d0d0; /* Slightly dimmed white for less emphasis */
+}
+
+.result-container strong {
+    color: #ff6200; /* Orange */
+}
+
+/* Link styling */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #ffffff; /* White */
+    background: linear-gradient(45deg, #ff6200, #ff8c00); /* Orange gradient */
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 98, 0, 0.5); /* Orange shadow */
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+    .container, .result-container {
+        padding: 20px;
+        margin-top: 120px; /* Adjusted for larger logo on mobile */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    input[type="text"], button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .logo {
+        width: 240px; /* Doubled from 120px to 240px for mobile */
+        top: 10px;
+        left: 10px;
+    }
+}
